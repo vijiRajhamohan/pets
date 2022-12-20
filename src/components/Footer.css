@@ -1,0 +1,55 @@
+.footer {
+  padding-top: 20px;
+  background-color: black;
+}
+.foot-head {
+  font-size: 18px;
+  color: white;
+}
+.foot-cont {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #9ca3af;
+}
+.foot1-cont {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #696970;
+}
+.footer-btn {
+  background: #ff6584;
+  border-radius: 6px;
+  height: 30px;
+}
+.textfoo {
+  color: white;
+  font-size: 10px;
+}
+hr.style1 {
+  border-top: 2px solid #e1d7d7;
+  display: block;
+}
+.foot-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400;
+}
+.f:link,
+.f:visited {
+
+  text-decoration: none;
+}
+
+.f:hover,
+.f:active {
+ 
+  text-decoration: underline;
+}
+

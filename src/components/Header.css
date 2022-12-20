@@ -1,0 +1,21 @@
+.head {
+  font-size: 25px;
+  /* color: rgba(18, 18, 18, 0.728); */
+  font-weight: 700;
+}
+.nav-item {
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: rgba(57, 5, 243, 0.965);
+  text-decoration: underline;
+}
+

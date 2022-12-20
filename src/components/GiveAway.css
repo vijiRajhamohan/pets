@@ -1,0 +1,23 @@
+.give {
+  padding-bottom: 50px;
+}
+.give-head {
+  font: "Roboto";
+  font-weight: 400;
+  font-size: 32px;
+}
+.give-cont {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+.btn-give {
+  font-weight: 400;
+}

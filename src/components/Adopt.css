@@ -1,0 +1,49 @@
+.adopt {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.adopt-head {
+  font: "Roboto";
+  font-weight: 400;
+  font-size: 32px;
+}
+.adopt-cont {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+.adopt-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400;
+}
+.adopt-btn {
+  background: #ff6584;
+  color: white;
+  border-radius: 6px;
+}
+.required:after {
+  content: " *";
+  color: red;
+}
+.view:link,
+.view:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.view:hover,
+.view:active {
+  color: rgba(57, 5, 243, 0.965);
+  text-decoration: underline;
+}

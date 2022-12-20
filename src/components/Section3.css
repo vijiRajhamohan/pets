@@ -1,0 +1,19 @@
+.sec {
+  padding-bottom: 50px;
+}
+.sec3-cont {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
