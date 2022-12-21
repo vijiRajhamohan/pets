@@ -39,7 +39,7 @@ export default function AdoptForm() {
       >
         {({ errors, touched }) => (
           <Form id="adopt-form">
-            <h5>What pet do you want to give away ?</h5>
+            <h5>What pet do you want to adopt ?</h5>
             <div className="col-12 col-sm-7 py-2">
               <label htmlFor="pet">
                 Pet type<span className="text-danger">*</span>

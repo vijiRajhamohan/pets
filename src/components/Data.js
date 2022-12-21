@@ -30,7 +30,7 @@ export const dogs = [
   {
     id: 5,
     type: "dog",
-    name: "Ramu",
+    name: "Guntu",
     breed: "Maine",
     age: 7,
   },
