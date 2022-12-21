@@ -16,7 +16,6 @@ export default function AdoptForm() {
 
   const handledata = (id) => {
     const getBreedData = breed.filter((u) => u.pet_id === id);
-    console.log(getBreedData);
     setBreedName(getBreedData);
   };
 
@@ -33,7 +32,7 @@ export default function AdoptForm() {
         validationSchema={AdoptSchema}
         onSubmit={(values, { resetForm }) => {
           localStorage.setItem("giveAway", JSON.stringify(values));
-          console.log(values);
+
           resetForm("");
         }}
       >
