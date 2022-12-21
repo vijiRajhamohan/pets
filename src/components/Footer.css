@@ -43,13 +43,10 @@ hr.style1 {
 }
 .f:link,
 .f:visited {
-
   text-decoration: none;
 }
 
 .f:hover,
 .f:active {
- 
   text-decoration: underline;
 }
-

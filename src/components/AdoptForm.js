@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-import { categories } from "./Data";
+import { data } from "./Data";
+import { breed } from "./Data";
 
 export default function AdoptForm() {
   const AdoptSchema = Yup.object().shape({
@@ -11,13 +12,14 @@ export default function AdoptForm() {
     email: Yup.string().email().required(),
     phone: Yup.number().required().positive().integer(),
   });
-  // const [typeId, setTypeId] = useState("");
   const [breedName, setBreedName] = useState([]);
-  const handledata = (e) => {
-    const getTypeId = e.target.value;
-    const getBreedData = categories.find((t) => t.id === getTypeId).breed;
+
+  const handledata = (id) => {
+    const getBreedData = breed.filter((u) => u.pet_id === id);
+    console.log(getBreedData);
     setBreedName(getBreedData);
   };
+
   return (
     <div>
       <Formik
@@ -30,34 +32,35 @@ export default function AdoptForm() {
         }}
         validationSchema={AdoptSchema}
         onSubmit={(values, { resetForm }) => {
-          localStorage.setItem("pet", JSON.stringify(values));
+          localStorage.setItem("giveAway", JSON.stringify(values));
           console.log(values);
-          resetForm({ values: " " });
+          resetForm("");
         }}
       >
         {({ errors, touched }) => (
           <Form id="adopt-form">
-            <h5 className="py-3">What pet do you want to adopt ?</h5>
+            <h5>What pet do you want to give away ?</h5>
             <div className="col-12 col-sm-7 py-2">
               <label htmlFor="pet">
                 Pet type<span className="text-danger">*</span>
               </label>
-
-              <select
+              <Field
+                as="select"
                 name="pet"
                 className="form-select"
-                onChange={(e) => handledata(e)}
+                onClick={(e) => handledata(e.target.value)}
                 style={{ fontWeight: 700 }}
               >
-                <option value="">--select--</option>
-                {categories.map((op, index) => {
+                <option>--select--</option>
+                {data.map((op, index) => {
                   return (
                     <option key={index} value={op.id}>
                       {op.type}
                     </option>
                   );
                 })}
-              </select>
+              </Field>
+
               {errors.pet && touched.pet ? (
                 <span className="text-danger text-start">*{errors.pet}*</span>
               ) : null}
@@ -68,19 +71,22 @@ export default function AdoptForm() {
                 Breed<span className="text-danger">*</span>
               </label>
 
-              <select
+              <Field
+                as="select"
                 name="breed"
                 className="form-select"
                 style={{ fontWeight: 700 }}
               >
-                {breedName.map((getBreed, index) => {
+                <option>--select--</option>
+                {breedName.map((g, index) => {
                   return (
-                    <option key={index} value={getBreed.breed_id}>
-                      {getBreed.breed_name}
+                    <option key={index} value={g.breed_name}>
+                      {g.breed_name}
                     </option>
                   );
                 })}
-              </select>
+              </Field>
+
               {errors.breed && touched.breed ? (
                 <span className="text-danger text-start">*{errors.breed}*</span>
               ) : null}

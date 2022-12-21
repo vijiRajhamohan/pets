@@ -36,14 +36,3 @@
   content: " *";
   color: red;
 }
-.view:link,
-.view:visited {
-  color: black;
-  text-decoration: none;
-}
-
-.view:hover,
-.view:active {
-  color: rgba(57, 5, 243, 0.965);
-  text-decoration: underline;
-}

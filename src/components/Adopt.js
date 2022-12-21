@@ -4,6 +4,7 @@ import "./Adopt.css";
 import AdoptForm from "./AdoptForm";
 import DTable from "./DTable";
 import CTable from "./CTable";
+
 export default function Adopt() {
   const [choose, setChoose] = useState("dogs");
 
@@ -65,11 +66,21 @@ export default function Adopt() {
             </div>
             <div className="modal-body">
               <div className="gap-1 d-flex">
-                <Link to="/" onClick={() => setChoose("dogs")} className="view">
+                <Link
+                  to="/"
+                  onClick={() => setChoose("dogs")}
+                  style={{ color: choose === "dogs" ? "blue" : "black" }}
+                  className="view"
+                >
                   <h5>DOGS</h5>
                 </Link>{" "}
                 <span>|</span>{" "}
-                <Link to="/" onClick={() => setChoose("cats")} className="view">
+                <Link
+                  to="/"
+                  onClick={() => setChoose("cats")}
+                  style={{ color: choose === "cats" ? "blue" : "black" }}
+                  className="view"
+                >
                   <h5>CATS</h5>{" "}
                 </Link>
               </div>
